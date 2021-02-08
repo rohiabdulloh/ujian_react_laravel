@@ -3,7 +3,7 @@ import { Inertia } from '@inertiajs/inertia';
 import { InertiaLink } from '@inertiajs/inertia-react';
 
 export default (props) => {
-    console.log(props)
+    
    //state untuk nilai input form
   const [values, setValues] = useState({
     email: "",
@@ -37,7 +37,7 @@ export default (props) => {
     {/* logo */}                   
     <div className="login-logo">
         <a href="#">
-            <img src="images/icon/logo.png" alt="CoolAdmin" />
+            <img src="/images/icon/logo.png" alt="CoolAdmin" />
         </a>
     </div>
 
@@ -74,6 +74,9 @@ export default (props) => {
             <div className="login-checkbox">
                 <label>
                     <input type="checkbox" name="remember"/>Remember Me
+                </label>
+                <label>
+                    <InertiaLink href={route('password.emailform')}>Forgotten Password?</InertiaLink>
                 </label>
             </div>
 

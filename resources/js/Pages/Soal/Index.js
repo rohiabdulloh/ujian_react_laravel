@@ -70,7 +70,7 @@ export default (props) => {
               <ol type="A" style={{marginLeft: 20}}>
                   {pilihan.map((pil) => {
                     if(so.kunci==pil.no){
-                      return (<li style={{color: 'blue', fontWeight:'bold'}} key={pil.no} dangerouslySetInnerHTML={{__html: pil.teks}}></li>)
+                      return (<li  key={pil.no} style={{color: 'blue', fontWeight:'bold'}} dangerouslySetInnerHTML={{__html: pil.teks}}></li>)
                     }else{
                       return (<li key={pil.no} dangerouslySetInnerHTML={{__html: pil.teks}}></li>)
                     }

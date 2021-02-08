@@ -264,6 +264,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       sort: 'asc',
       width: 50
     }, {
+      label: 'Foto',
+      field: 'foto',
+      sort: 'asc',
+      width: 100
+    }, {
+      label: 'Email',
+      field: 'email',
+      sort: 'asc',
+      width: 50
+    }, {
       label: 'NIS',
       field: 'nis',
       width: 100
@@ -275,6 +285,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       label: 'Jenis Kelamin',
       field: 'jk',
       width: 50
+    }, {
+      label: 'Kelas',
+      field: 'kelas',
+      width: 50
+    }, {
+      label: 'No. Ujian',
+      field: 'no_ujian',
+      width: 100
     }, {
       label: 'Alamat',
       field: 'alamat',
@@ -291,20 +309,27 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     rows: []
   }; //memasukkan data dari database ke tabel
 
-  siswa.map(function (kat, index) {
+  siswa.map(function (sis, index) {
     data.rows.push({
       no: index + 1,
-      nis: kat.nis,
-      nama: kat.nama_siswa,
-      jk: kat.jenis_kelamin,
-      alamat: kat.alamat,
-      asal: kat.asal_sekolah,
+      foto: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+        src: '/images/icon/' + sis.picture,
+        width: "60"
+      }),
+      email: sis.email,
+      nis: sis.nis,
+      nama: sis.nama_siswa,
+      jk: sis.jenis_kelamin,
+      kelas: sis.kelas,
+      no_ujian: sis.no_ujian,
+      alamat: sis.alamat,
+      asal: sis.asal_sekolah,
       aksi: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         className: "table-data-feature",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
           className: "item danger",
           onClick: function onClick() {
-            return handleDialogOpen(route('siswa.destroy', kat.id));
+            return handleDialogOpen(route('siswa.destroy', sis.id));
           },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
             className: "fas fa-trash"
@@ -503,6 +528,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 className: "account-item clearfix js-item-menu",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                   className: "image",
+                  onClick: handleOpenMenu,
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                     src: '/images/icon/' + user.picture,
                     alt: user.name
@@ -756,6 +782,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-sidebar",
@@ -818,6 +848,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-mobile",

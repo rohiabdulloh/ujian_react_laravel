@@ -67,7 +67,6 @@ export default (props) => {
   //mengirim data ketika form submit
   function handleSubmit(e){
     e.preventDefault()
-    console.log(values)
     Inertia.post(route('soal.store'), values);
   }
 

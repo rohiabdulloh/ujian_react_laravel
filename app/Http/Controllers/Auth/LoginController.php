@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 use Inertia\Inertia;
+use Redirect;
 
 class LoginController extends Controller
 {
@@ -51,9 +52,9 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         if($user->level==1){
-            $this->redirectTo = '/dashboard';
+            return Redirect::route('dashboard');
         }else{
-            $this->redirectTo = '/home';
+            return Redirect::route('home');
         }
     }
 }

@@ -1,20 +1,25 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { usePage } from '@inertiajs/inertia-react';
+import React, {useState} from 'react';
 
-import HeaderMobile from './FrontHeaderMobile';
-import HeaderDesktop from './FrontHeaderDesktop';
+import FrontHeader from './FrontHeader';
+import FrontMenuDesktop from './FrontMenuDesktop';
+import FrontMenuMobile from './FrontMenuMobile';
+
 
 export default function Layout({ children }) {
+    const [openMenu, setOpenMenu] = useState(false);
   
+    const handleOpenMenu = () => {
+      setOpenMenu(!openMenu);
+    }
+
   return (
     <div className="page-wrapper">
-        <HeaderDesktop />
-        <HeaderMobile />
+        <FrontMenuDesktop />
 
-        <div className="page-container">
-            
-            
+        <div className="page-container2">
+            <FrontHeader openMenu={handleOpenMenu} />
+            <FrontMenuMobile rightMargin={openMenu ? '0' : '-300px'}/>
+
             <div className="main-content">
                 <div className="container-fluid">
 

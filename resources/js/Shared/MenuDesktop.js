@@ -9,6 +9,7 @@ export default () => {
     {icon: 'fa-question-circle', title: "Soal Ujian", link: "/soal"},
     {icon: 'fa-user-circle', title: "Peserta Ujian", link: "/siswa"},
     {icon: 'fa-check-square', title: "Hasil Ujian", link: "/nilai"},
+    {icon: 'fa-envelope', title: "Pesan", link: "/pesan"},
   ];
 
   return (

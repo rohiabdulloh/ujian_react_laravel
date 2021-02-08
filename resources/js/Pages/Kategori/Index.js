@@ -32,7 +32,10 @@ export default (props) => {
     let data = {
       columns: [
         { label: 'No', field: 'no', sort: 'asc', width: 50 },
-        { label: 'Nama Kategori', field: 'nama', width: 500 },
+        { label: 'Kategori Ujian', field: 'nama', width: 400 },
+        { label: 'Mulai', field: 'mulai', width: 100 },
+        { label: 'Selesai', field: 'selesai', width: 100 },
+        { label: 'Durasi', field: 'durasi', width: 100 },
         { label: '', field: 'aksi', width: 100 },
       ],
       rows: []
@@ -44,6 +47,9 @@ export default (props) => {
         { 
           no: index+1,
           nama: kat.nama_kategori,
+          mulai: kat.mulai,
+          selesai: kat.selesai,
+          durasi: kat.durasi,
           aksi: (
             <div className="table-data-feature">            
               <button className="item primary" onClick={()=>Inertia.get(route('kategori.edit', kat.id))}>

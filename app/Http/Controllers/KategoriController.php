@@ -30,10 +30,18 @@ class KategoriController extends Controller
     public function store(Request $rq){
         $this->validate($rq,[
             'nama_kategori' => 'required',
+            'durasi' => 'required',
+            'mulai' => 'required',
+            'selesai' => 'required',
+            'deskripsi' => 'required',
         ]);
 
     	$kategori = new Kategori;
     	$kategori->nama_kategori = $rq->nama_kategori;
+    	$kategori->durasi = $rq->durasi;
+    	$kategori->mulai = date('Y-m-d H:i:s', strtotime($rq->mulai));
+    	$kategori->selesai = date('Y-m-d H:i:s', strtotime($rq->selesai));
+    	$kategori->deskripsi = $rq->deskripsi;
     	$kategori->save();
 
     	return Redirect::route('kategori.index')
@@ -51,10 +59,18 @@ class KategoriController extends Controller
     public function update(Request $rq, $id){
         $this->validate($rq,[
             'nama_kategori' => 'required',
+            'durasi' => 'required',
+            'mulai' => 'required',
+            'selesai' => 'required',
+            'deskripsi' => 'required',
         ]);
         
     	$kategori = Kategori::find($id);
     	$kategori->nama_kategori = $rq->nama_kategori;
+    	$kategori->durasi = $rq->durasi;
+    	$kategori->mulai = date('Y-m-d H:i:s', strtotime($rq->mulai));
+    	$kategori->selesai = date('Y-m-d H:i:s', strtotime($rq->selesai));
+    	$kategori->deskripsi = $rq->deskripsi;
     	$kategori->update();
 
     	return Redirect::route('kategori.index')

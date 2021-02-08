@@ -3,13 +3,40 @@ import Helmet from 'react-helmet';
 import { Inertia } from '@inertiajs/inertia';
 import { InertiaLink } from '@inertiajs/inertia-react';
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 import Layout from './../../Shared/Layout';
 
 export default (props) => {
   //state untuk nilai input form
   const [values, setValues] = useState({
     nama_kategori: "",
+    durasi: "",
+    mulai: "",
+    selesai: "",
+    deskripsi: "",
   });
+
+  const modules = {
+    toolbar: [
+      [{ 'header': [1, 2, false] }],
+      ['bold', 'italic', 'underline','strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image'],
+      ['clean']
+    ],
+  };
+
+  const formats = [
+    'header',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image'
+  ];
 
   //menangani perubahan nilai input pada form
   function handleChange(e){
@@ -19,6 +46,13 @@ export default (props) => {
     setValues(values => ({
       ...values,
       [key]: value,
+    }))
+  }
+
+  function handleEditorChange(name, value){
+    setValues(values => ({
+      ...values,
+      [name]: value,
     }))
   }
 
@@ -45,7 +79,7 @@ export default (props) => {
                     <div className="col col-md-2">
                         <label htmlFor="nama_kategori" className=" form-control-label">Nama Kategori</label>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-8">
                         <input type="text" id="nama_kategori" name="nama_kategori" placeholder="Nama Kategori" 
                             className={"form-control " + ('nama_kategori' in props.errors ? 'is-invalid' : '')}
                             value={values.nama_kategori}
@@ -53,6 +87,73 @@ export default (props) => {
                         />
                         {'nama_kategori' in props.errors && (
                             <small className="form-text text-danger">{props.errors.nama_kategori}</small>
+                        )}
+                    </div>
+                </div>
+
+                <div className="row form-group">
+                    <div className="col col-md-2">
+                        <label htmlFor="mulai" className=" form-control-label">Mulai</label>
+                    </div>
+                    <div className="col-12 col-md-5">
+                        <DatePicker  className="form-control"
+                          showTimeSelect
+                          dateFormat="yyyy-MM-dd HH:mm"
+                          selected={values.mulai} 
+                          onChange={date => handleEditorChange('mulai', date)} 
+                        />
+                        {'mulai' in props.errors && (
+                            <small className="form-text text-danger">{props.errors.mulai}</small>
+                        )}
+                    </div>
+                </div>
+                
+                <div className="row form-group">
+                    <div className="col col-md-2">
+                        <label htmlFor="selesai" className=" form-control-label">Selesai</label>
+                    </div>
+                    <div className="col-12 col-md-5">
+                        <DatePicker className="form-control"
+                          showTimeSelect
+                          dateFormat="yyyy-MM-dd HH:mm"
+                          selected={values.selesai} 
+                          onChange={date => handleEditorChange('selesai', date)}
+                        />
+                        {'selesai' in props.errors && (
+                            <small className="form-text text-danger">{props.errors.selesai}</small>
+                        )}
+                    </div>
+                </div>
+
+                <div className="row form-group">
+                    <div className="col col-md-2">
+                        <label htmlFor="durasi" className=" form-control-label">Durasi (menit)</label>
+                    </div>
+                    <div className="col-12 col-md-2">
+                        <input type="number" id="durasi" name="durasi" placeholder="Durasi (menit)" 
+                            className={"form-control " + ('durasi' in props.errors ? 'is-invalid' : '')}
+                            value={values.durasi}
+                            onChange={handleChange}
+                        />
+                        {'durasi' in props.errors && (
+                            <small className="form-text text-danger">{props.errors.durasi}</small>
+                        )}
+                    </div>
+                </div>
+                
+                <div className="row form-group">
+                    <div className="col col-md-2">
+                        <label htmlFor="deskripsi" className=" form-control-label">Deskripsi</label>
+                    </div>
+                    <div className="col-12 col-md-10">
+                        <ReactQuill theme="snow"
+                            modules={modules}
+                            formats={formats}
+                            value={values.deskripsi}
+                            onChange={(value)=>handleEditorChange('deskripsi', value)}
+                        />
+                        {'deskripsi' in props.errors && (
+                            <small className="form-text text-danger">{props.errors.deskripsi}</small>
                         )}
                     </div>
                 </div>

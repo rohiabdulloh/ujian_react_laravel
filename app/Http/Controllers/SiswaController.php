@@ -15,7 +15,7 @@ class SiswaController extends Controller
     public function index()
     {
         $siswa = Siswa::leftJoin('users', 'users.id', '=', 'siswa.id_user')
-            ->select('siswa.*', 'users.picture')
+            ->select('siswa.*', 'users.picture', 'users.email')
             ->orderBy('siswa.id', 'desc')->get();
 
         return Inertia::render('Siswa/Index', [

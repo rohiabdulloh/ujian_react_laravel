@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use App\Models\Siswa;
 use Auth;
 
 class HandleInertiaRequests extends Middleware
@@ -37,11 +38,19 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        if(Auth::check()){
+            $siswa = Siswa::where('id_user','=', Auth::user()->id)->first();
+        }else{
+            $siswa = null;
+        }
+
         return array_merge(parent::share($request), [
             'flash' => [ //pesan jika aksi berhasil
                 'message' => $request->session()->get('message'),
             ],
-            'user' => Auth::user()
+            'user' => Auth::user(),
+            'ujian' => $request->session()->get('ujian'),
+            'siswa' => $siswa
         ]);
     }
 }

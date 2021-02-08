@@ -17,6 +17,7 @@ class BuatTabelJawaban extends Migration
             $table->id();
             $table->integer('id_user');
             $table->integer('id_soal');
+            $table->integer('urut');
             $table->integer('jawaban');
             $table->integer('hasil');
             $table->timestamps();

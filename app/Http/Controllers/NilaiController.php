@@ -14,7 +14,8 @@ class NilaiController extends Controller
     //tampilkan halaman manajemen data
     public function index()
     {
-        $nilai = Nilai::leftJoin('siswa', 'siswa.id', '=', 'nilai.id_siswa')
+        $nilai = Nilai::leftJoin('users', 'users.id', '=', 'nilai.id_user')
+            ->leftJoin('siswa','siswa.id_user','=','nilai.id_user')
             ->select('siswa.nis', 'siswa.nama_siswa', 'nilai.*')
             ->orderBy('id', 'desc')->get();
 
@@ -28,7 +29,8 @@ class NilaiController extends Controller
     //tampilkan halaman data per kategori
     public function show($id)
     {
-        $nilai = Nilai::leftJoin('siswa', 'siswa.id', '=', 'nilai.id_siswa')
+        $nilai = Nilai::leftJoin('users', 'users.id', '=', 'nilai.id_user')
+            ->leftJoin('siswa','siswa.id_user','=','nilai.id_user')
             ->select('siswa.nis', 'siswa.nama_siswa', 'nilai.*')
             ->orderBy('id', 'desc');
         if($id != 0) $nilai = $nilai->where('id_kategori', '=', $id);

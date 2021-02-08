@@ -18,6 +18,8 @@ class BuatTabelSiswa extends Migration
             $table->integer('id_user');
             $table->string('nis');
             $table->string('nama_siswa');
+            $table->string('no_ujian');
+            $table->string('kelas');
             $table->enum('jenis_kelamin',['L','P']);
             $table->string('alamat');
             $table->string('asal_sekolah');

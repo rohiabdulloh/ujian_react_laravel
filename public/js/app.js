@@ -33065,6 +33065,14 @@ if (false) {} else {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Auth/Email": [
+		"./resources/js/Pages/Auth/Email.js",
+		"resources_js_Pages_Auth_Email_js"
+	],
+	"./Auth/Email.js": [
+		"./resources/js/Pages/Auth/Email.js",
+		"resources_js_Pages_Auth_Email_js"
+	],
 	"./Auth/Login": [
 		"./resources/js/Pages/Auth/Login.js",
 		"resources_js_Pages_Auth_Login_js"
@@ -33089,13 +33097,69 @@ var map = {
 		"./resources/js/Pages/Dashboard/Index.js",
 		"resources_js_Pages_Dashboard_Index_js"
 	],
-	"./Home/Index": [
-		"./resources/js/Pages/Home/Index.js",
-		"resources_js_Pages_Home_Index_js"
+	"./Front/Home": [
+		"./resources/js/Pages/Front/Home.js",
+		"resources_js_Pages_Front_Home_js"
 	],
-	"./Home/Index.js": [
-		"./resources/js/Pages/Home/Index.js",
-		"resources_js_Pages_Home_Index_js"
+	"./Front/Home.js": [
+		"./resources/js/Pages/Front/Home.js",
+		"resources_js_Pages_Front_Home_js"
+	],
+	"./Front/Kontak": [
+		"./resources/js/Pages/Front/Kontak.js",
+		"resources_js_Pages_Front_Kontak_js"
+	],
+	"./Front/Kontak.js": [
+		"./resources/js/Pages/Front/Kontak.js",
+		"resources_js_Pages_Front_Kontak_js"
+	],
+	"./Front/Password": [
+		"./resources/js/Pages/Front/Password.js",
+		"resources_js_Pages_Front_Password_js"
+	],
+	"./Front/Password.js": [
+		"./resources/js/Pages/Front/Password.js",
+		"resources_js_Pages_Front_Password_js"
+	],
+	"./Front/Peserta": [
+		"./resources/js/Pages/Front/Peserta.js",
+		"resources_js_Pages_Front_Peserta_js"
+	],
+	"./Front/Peserta.js": [
+		"./resources/js/Pages/Front/Peserta.js",
+		"resources_js_Pages_Front_Peserta_js"
+	],
+	"./Front/Ujian": [
+		"./resources/js/Pages/Front/Ujian.js",
+		"resources_js_Pages_Front_Ujian_js"
+	],
+	"./Front/Ujian.js": [
+		"./resources/js/Pages/Front/Ujian.js",
+		"resources_js_Pages_Front_Ujian_js"
+	],
+	"./Front/UjianHasil": [
+		"./resources/js/Pages/Front/UjianHasil.js",
+		"resources_js_Pages_Front_UjianHasil_js"
+	],
+	"./Front/UjianHasil.js": [
+		"./resources/js/Pages/Front/UjianHasil.js",
+		"resources_js_Pages_Front_UjianHasil_js"
+	],
+	"./Front/UjianKategori": [
+		"./resources/js/Pages/Front/UjianKategori.js",
+		"resources_js_Pages_Front_UjianKategori_js"
+	],
+	"./Front/UjianKategori.js": [
+		"./resources/js/Pages/Front/UjianKategori.js",
+		"resources_js_Pages_Front_UjianKategori_js"
+	],
+	"./Front/UjianKonfirmasi": [
+		"./resources/js/Pages/Front/UjianKonfirmasi.js",
+		"resources_js_Pages_Front_UjianKonfirmasi_js"
+	],
+	"./Front/UjianKonfirmasi.js": [
+		"./resources/js/Pages/Front/UjianKonfirmasi.js",
+		"resources_js_Pages_Front_UjianKonfirmasi_js"
 	],
 	"./Kategori/Create": [
 		"./resources/js/Pages/Kategori/Create.js",
@@ -33120,6 +33184,14 @@ var map = {
 	"./Kategori/Index.js": [
 		"./resources/js/Pages/Kategori/Index.js",
 		"resources_js_Pages_Kategori_Index_js"
+	],
+	"./Kontak/Index": [
+		"./resources/js/Pages/Kontak/Index.js",
+		"resources_js_Pages_Kontak_Index_js"
+	],
+	"./Kontak/Index.js": [
+		"./resources/js/Pages/Kontak/Index.js",
+		"resources_js_Pages_Kontak_Index_js"
 	],
 	"./Nilai/Index": [
 		"./resources/js/Pages/Nilai/Index.js",
@@ -33267,7 +33339,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Dashboard_Index_js":1,"resources_js_Pages_Home_Index_js":1,"resources_js_Pages_Kategori_Create_js":1,"resources_js_Pages_Kategori_Edit_js":1,"resources_js_Pages_Kategori_Index_js":1,"resources_js_Pages_Nilai_Index_js":1,"resources_js_Pages_Siswa_Index_js":1,"resources_js_Pages_Soal_Create_js":1,"resources_js_Pages_Soal_Edit_js":1,"resources_js_Pages_Soal_Index_js":1,"resources_js_Pages_User_Profil_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Auth_Email_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Dashboard_Index_js":1,"resources_js_Pages_Front_Home_js":1,"resources_js_Pages_Front_Kontak_js":1,"resources_js_Pages_Front_Password_js":1,"resources_js_Pages_Front_Peserta_js":1,"resources_js_Pages_Front_Ujian_js":1,"resources_js_Pages_Front_UjianHasil_js":1,"resources_js_Pages_Front_UjianKategori_js":1,"resources_js_Pages_Front_UjianKonfirmasi_js":1,"resources_js_Pages_Kategori_Create_js":1,"resources_js_Pages_Kategori_Edit_js":1,"resources_js_Pages_Kategori_Index_js":1,"resources_js_Pages_Kontak_Index_js":1,"resources_js_Pages_Nilai_Index_js":1,"resources_js_Pages_Siswa_Index_js":1,"resources_js_Pages_Soal_Create_js":1,"resources_js_Pages_Soal_Edit_js":1,"resources_js_Pages_Soal_Index_js":1,"resources_js_Pages_User_Profil_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

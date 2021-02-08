@@ -204,9 +204,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
-/* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
-/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../Shared/Layout */ "./resources/js/Shared/Layout.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var mdbreact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mdbreact */ "./node_modules/mdbreact/dist/mdbreact.esm.js");
+/* harmony import */ var mdbreact_dist_css_mdb_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! mdbreact/dist/css/mdb.css */ "./node_modules/mdbreact/dist/css/mdb.css");
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Shared/Layout */ "./resources/js/Shared/Layout.js");
 
 
 
@@ -227,7 +228,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
+  var isMount = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(false);
   var nilai = props.nilai;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.id),
@@ -238,8 +241,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
   var changeKategori = function changeKategori(e) {
     setKategori(e.target.value);
-  }; //buat data tabel
+  }; //Ke halaman kategori/show jika nilai kategori diubah
 
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (isMount.current) _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('nilai.show', kategori));else isMount.current = true;
+  }, [kategori]); //buat data tabel
 
   var data = {
     columns: [{
@@ -256,6 +263,18 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       field: 'nama',
       width: 200
     }, {
+      label: 'Mulai',
+      field: 'mulai',
+      width: 100
+    }, {
+      label: 'Selesai',
+      field: 'selesai',
+      width: 100
+    }, {
+      label: 'Jml. Benar',
+      field: 'benar',
+      width: 200
+    }, {
       label: 'Nilai',
       field: 'nilai',
       width: 50
@@ -263,15 +282,18 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     rows: []
   }; //memasukkan data dari database ke tabel
 
-  nilai.map(function (kat, index) {
+  nilai.map(function (nil, index) {
     data.rows.push({
       no: index + 1,
-      nis: kat.nis,
-      nama: kat.nama_siswa,
-      nilai: kat.nilai
+      nis: nil.nis,
+      nama: nil.nama_siswa,
+      mulai: nil.mulai,
+      selesai: nil.selesai,
+      benar: nil.jml_benar,
+      nilai: nil.nilai
     });
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_Layout__WEBPACK_IMPORTED_MODULE_5__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_Layout__WEBPACK_IMPORTED_MODULE_6__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.default, {
       title: "Nilai"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
@@ -310,7 +332,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
               className: "table-responsive table-data",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(mdbreact__WEBPACK_IMPORTED_MODULE_3__.MDBDataTable, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(mdbreact__WEBPACK_IMPORTED_MODULE_4__.MDBDataTable, {
                 striped: true,
                 bordered: true,
                 hover: true,
@@ -398,6 +420,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 className: "account-item clearfix js-item-menu",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                   className: "image",
+                  onClick: handleOpenMenu,
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                     src: '/images/icon/' + user.picture,
                     alt: user.name
@@ -651,6 +674,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-sidebar",
@@ -713,6 +740,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-mobile",

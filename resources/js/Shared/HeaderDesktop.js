@@ -28,7 +28,7 @@ export default (props) => {
     {/* menu user */}  
     <div className="account-wrap">
         <div className="account-item clearfix js-item-menu">
-            <div className="image">
+            <div className="image" onClick={handleOpenMenu}>
                 <img src={'/images/icon/'+user.picture} alt={user.name} />
             </div>
 

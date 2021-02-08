@@ -40,7 +40,7 @@ class UserController extends Controller
 
         if($rq->hasFile('picture')){ //upload foto hanya jika ada perubahan foto
             //hapus file foto sebelumnya
-            if($user->picture!=null and file_exists(public_path('images/icon/'.$user->picture))){
+            if($user->picture!=null and $user->picture!='user.gif' and file_exists(public_path('images/icon/'.$user->picture))){
                 unlink(public_path('images/icon/'.$user->picture));
             }
             $image_name = "user-".time().'.'.$rq->picture->extension();  

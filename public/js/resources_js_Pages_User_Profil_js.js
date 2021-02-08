@@ -284,6 +284,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 className: "account-item clearfix js-item-menu",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                   className: "image",
+                  onClick: handleOpenMenu,
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
                     src: '/images/icon/' + user.picture,
                     alt: user.name
@@ -537,6 +538,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-sidebar",
@@ -599,6 +604,10 @@ __webpack_require__.r(__webpack_exports__);
     icon: 'fa-check-square',
     title: "Hasil Ujian",
     link: "/nilai"
+  }, {
+    icon: 'fa-envelope',
+    title: "Pesan",
+    link: "/pesan"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
     className: "navbar-mobile",

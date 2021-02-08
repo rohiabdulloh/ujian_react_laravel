@@ -15,8 +15,12 @@ class BuatTabelNilai extends Migration
     {
         Schema::create('nilai', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_siswa');
+            $table->integer('id_user');
             $table->integer('id_kategori');
+            $table->integer('durasi');
+            $table->dateTime('mulai')->nullable();
+            $table->dateTime('selesai')->nullable();
+            $table->integer('jml_benar');
             $table->decimal('nilai',5,2);
             $table->timestamps();
         });

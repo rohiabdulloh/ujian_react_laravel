@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import Helmet from 'react-helmet';
+import { Inertia } from '@inertiajs/inertia';
 
 import { MDBDataTable } from 'mdbreact';
 import 'mdbreact/dist/css/mdb.css';
@@ -7,6 +8,8 @@ import 'mdbreact/dist/css/mdb.css';
 import Layout from './../../Shared/Layout';
 
 export default (props) => {
+    const isMount = useRef(false);
+
     const nilai = props.nilai;
     const [kategori, setKategori] = useState(props.id);
 
@@ -14,6 +17,12 @@ export default (props) => {
     const changeKategori = (e) =>{
       setKategori(e.target.value);
     };
+    
+    //Ke halaman kategori/show jika nilai kategori diubah
+    useEffect(()=>{
+      if(isMount.current) Inertia.get(route('nilai.show', kategori));
+      else isMount.current = true;
+    }, [kategori]);
 
     //buat data tabel
     let data = {
@@ -21,19 +30,25 @@ export default (props) => {
         { label: 'No', field: 'no', sort: 'asc', width: 50 },
         { label: 'NIS', field: 'nis', width: 100 },
         { label: 'Nama Siswa', field: 'nama', width: 200 },
+        { label: 'Mulai', field: 'mulai', width: 100 },
+        { label: 'Selesai', field: 'selesai', width: 100 },
+        { label: 'Jml. Benar', field: 'benar', width: 200 },
         { label: 'Nilai', field: 'nilai', width: 50 },
       ],
       rows: []
     };
 
     //memasukkan data dari database ke tabel
-    nilai.map( (kat, index) => {
+    nilai.map( (nil, index) => {
       data.rows.push(
         { 
           no: index+1,
-          nis: kat.nis,
-          nama: kat.nama_siswa,
-          nilai: kat.nilai,
+          nis: nil.nis,
+          nama: nil.nama_siswa,
+          mulai: nil.mulai,
+          selesai: nil.selesai,
+          benar: nil.jml_benar,
+          nilai: nil.nilai,
         }
       )
     });
