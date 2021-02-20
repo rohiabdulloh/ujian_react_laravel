@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { Inertia } from '@inertiajs/inertia';
-import { InertiaLink } from '@inertiajs/inertia-react';
+import { set } from 'lodash';
 
 export default (props) => {
-    
+  const [isSend, setIsSend] = useState(false);
+
    //state untuk nilai input form
   const [values, setValues] = useState({
     email: "",
@@ -11,7 +12,7 @@ export default (props) => {
 
   //menangani perubahan input pada form
   function handleChange(e){
-    const key = e.target.name;
+          const key = e.target.name;
     const value = e.target.value;
 
     setValues(values => ({
@@ -23,7 +24,11 @@ export default (props) => {
   //menangani ketika form di-submit
   function handleSubmit(e){
     e.preventDefault()
-    Inertia.post(route('password.email'), values)
+    Inertia.post(route('password.email'), values,{
+        onSuccess: ()=>{
+            setIsSend(true);
+        }
+    });
   }
 
   return (
@@ -40,10 +45,12 @@ export default (props) => {
         </a>
     </div>
 
-    {/* form login */}    
+{isSend ? (
+    <p align="center"> Kami telah mengirim link reset password ke email. Silakan cek email Anda!</p>
+):(   
     <div className="login-form">
-        <form onSubmit={handleSubmit}>
-            
+        {/* form login */} 
+        <form onSubmit={handleSubmit}>            
             <div className="form-group">
                 <label>Email Address</label>
                 <input type="email" placeholder="Email"
@@ -63,7 +70,7 @@ export default (props) => {
     
         </form>
     </div>
-
+)}
                     </div>
                 </div>
             </div>

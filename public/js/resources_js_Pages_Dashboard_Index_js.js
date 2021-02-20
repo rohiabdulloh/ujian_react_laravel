@@ -27,9 +27,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/ResponsiveContainer.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/BarChart.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/CartesianGrid.js");
@@ -38,7 +37,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Tooltip.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Legend.js");
 /* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Bar.js");
-/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Shared/Layout */ "./resources/js/Shared/Layout.js");
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Shared/Layout */ "./resources/js/Shared/Layout.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -47,27 +47,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var InfoDashboard = function InfoDashboard(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "col-sm-6 col-md-3",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       style: {
         paddingBottom: 30
       },
       className: "overview-item overview-item--" + props.style,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "overview__inner",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "overview-box clearfix",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "icon",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
               className: "fas " + props.icon
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "text",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
               children: props.number
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               children: props.title
             })]
           })]
@@ -78,49 +78,49 @@ var InfoDashboard = function InfoDashboard(props) {
 };
 
 var Dashboard = function Dashboard(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.default, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_1__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("title", {
         children: "Dashboard"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "row m-t-25",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InfoDashboard, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(InfoDashboard, {
         style: "c1",
         icon: "fa-question-circle",
         number: props.soal,
         title: "Jumlah Soal"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InfoDashboard, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(InfoDashboard, {
         style: "c2",
         icon: "fa-envelope",
         number: props.kontak,
         title: "Jumlah Pesan"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InfoDashboard, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(InfoDashboard, {
         style: "c3",
         icon: "fa-user-circle",
         number: props.siswa,
         title: "Jumlah Peserta"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InfoDashboard, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(InfoDashboard, {
         style: "c4",
         icon: "fa-check-square",
         number: props.nilai,
         title: "Peserta Selesai"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "row",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "col-lg-12",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "au-card recent-report",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "au-card-inner",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h3", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
               className: "title-2",
               children: "Nilai Hasil Ujian"
-            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_4__.ResponsiveContainer, {
+            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_4__.ResponsiveContainer, {
               width: "100%",
               height: 300,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(recharts__WEBPACK_IMPORTED_MODULE_5__.BarChart, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(recharts__WEBPACK_IMPORTED_MODULE_5__.BarChart, {
                 data: props.data,
                 margin: {
                   top: 5,
@@ -128,11 +128,11 @@ var Dashboard = function Dashboard(props) {
                   left: 20,
                   bottom: 5
                 },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_6__.CartesianGrid, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_6__.CartesianGrid, {
                   strokeDasharray: "3 3"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_7__.XAxis, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_7__.XAxis, {
                   dataKey: "nilai"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_8__.YAxis, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_9__.Tooltip, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_10__.Legend, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_11__.Bar, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_8__.YAxis, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_9__.Tooltip, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_10__.Legend, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(recharts__WEBPACK_IMPORTED_MODULE_11__.Bar, {
                   dataKey: "jumlah",
                   fill: "#8884d8"
                 })]
@@ -146,7 +146,7 @@ var Dashboard = function Dashboard(props) {
 };
 
 Dashboard.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Shared_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Shared_Layout__WEBPACK_IMPORTED_MODULE_2__.default, {
     children: page
   });
 };
@@ -166,13 +166,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -188,10 +185,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
-  var user = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.usePage)().props.user;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
+  var user = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.user;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       openMenu = _useState2[0],
       setOpenMenu = _useState2[1];
@@ -206,88 +205,88 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     setOpenMenu(!openMenu);
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("header", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("header", {
     className: "header-desktop",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "section__content section__content--p30",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "container-fluid",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "header-wrap",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "form-header",
             children: " "
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "header-button",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
               className: "noti-wrap"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
               className: "account-wrap",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "account-item clearfix js-item-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "image",
                   onClick: handleOpenMenu,
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
                     src: '/images/icon/' + user.picture,
                     alt: user.name
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "content",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
                     onClick: handleOpenMenu,
-                    children: [user.name, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+                    children: [user.name, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                       className: "fas fa-angle-down"
                     })]
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "account-dropdown",
                   style: style.dropdown,
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                     className: "info clearfix",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                       className: "image",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
                         href: "#",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
                           src: '/images/icon/' + user.picture,
                           alt: user.name
                         })
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                       className: "content",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
                         className: "name",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
                           href: "#",
                           children: user.name
                         })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                         className: "email",
                         children: user.email
                       })]
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                     className: "account-dropdown__body",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                       className: "account-dropdown__item",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
                         href: "#",
                         onClick: function onClick() {
-                          return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get("/profil");
+                          return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.get("/profil");
                         },
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                           className: "fa fa-user"
                         }), "Profil"]
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                       className: "account-dropdown__item",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
                         href: "#",
                         onClick: function onClick() {
-                          return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.post("/logout");
+                          return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post("/logout");
                         },
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
                           className: "fa fa-sign-out-alt"
                         }), "Logout"]
                       })
@@ -316,12 +315,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _MenuMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MenuMobile */ "./resources/js/Shared/MenuMobile.js");
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _MenuMobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MenuMobile */ "./resources/js/Shared/MenuMobile.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -336,8 +332,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       openMenu = _useState2[0],
       setOpenMenu = _useState2[1];
@@ -346,34 +344,34 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     setOpenMenu(!openMenu);
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("header", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("header", {
     className: "header-mobile d-block d-lg-none",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "header-mobile__bar",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "container-fluid",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "header-mobile-inner",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
             className: "logo",
             href: "index.html",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
               src: "/images/icon/logo.png",
               alt: "CoolAdmin"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
             onClick: handleOpenMenu,
             className: 'hamburger hamburger--slider' + (openMenu ? ' is-active' : ''),
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
               className: "hamburger-box",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                 className: openMenu ? 'fas fa-times' : 'fas fa-bars'
               })
             })
           })]
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_MenuMobile__WEBPACK_IMPORTED_MODULE_2__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_MenuMobile__WEBPACK_IMPORTED_MODULE_1__.default, {
       display: openMenu ? 'block' : 'none'
     })]
   });
@@ -392,13 +390,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Layout)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _HeaderMobile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HeaderMobile */ "./resources/js/Shared/HeaderMobile.js");
-/* harmony import */ var _HeaderDesktop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./HeaderDesktop */ "./resources/js/Shared/HeaderDesktop.js");
-/* harmony import */ var _MenuDesktop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MenuDesktop */ "./resources/js/Shared/MenuDesktop.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _HeaderMobile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HeaderMobile */ "./resources/js/Shared/HeaderMobile.js");
+/* harmony import */ var _HeaderDesktop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HeaderDesktop */ "./resources/js/Shared/HeaderDesktop.js");
+/* harmony import */ var _MenuDesktop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MenuDesktop */ "./resources/js/Shared/MenuDesktop.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -409,28 +407,28 @@ __webpack_require__.r(__webpack_exports__);
 
 function Layout(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "page-wrapper",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_HeaderMobile__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("aside", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_HeaderMobile__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("aside", {
       className: "menu-sidebar d-none d-lg-block",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "logo",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
           href: "#",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
             src: "/images/icon/logo.png",
             alt: "Cool Admin"
           })
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "menu-sidebar__content",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_MenuDesktop__WEBPACK_IMPORTED_MODULE_6__.default, {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_MenuDesktop__WEBPACK_IMPORTED_MODULE_5__.default, {})
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: "page-container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_HeaderDesktop__WEBPACK_IMPORTED_MODULE_5__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_HeaderDesktop__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "main-content",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "container-fluid",
           children: children
         })
@@ -452,9 +450,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -486,16 +484,16 @@ __webpack_require__.r(__webpack_exports__);
     title: "Pesan",
     link: "/pesan"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
     className: "navbar-sidebar",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
       className: "list-unstyled navbar__list",
       children: menu.map(function (item) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.InertiaLink, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
             className: "js-arrow",
             href: item.link,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
               className: 'fas ' + item.icon
             }), " ", item.title]
           })
@@ -518,9 +516,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -552,21 +550,21 @@ __webpack_require__.r(__webpack_exports__);
     title: "Pesan",
     link: "/pesan"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
     className: "navbar-mobile",
     style: {
       display: props.display
     },
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "container-fluid",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
         className: "navbar-mobile__list list-unstyled",
         children: menu.map(function (item) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.InertiaLink, {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
               className: "js-arrow",
               href: item.link,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
                 className: 'fas ' + item.icon
               }), " ", item.title]
             })
@@ -26924,10 +26922,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_sortBy__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_sortBy__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash/get */ "./node_modules/lodash/get.js");
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var lodash_range__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash/range */ "./node_modules/lodash/range.js");
-/* harmony import */ var lodash_range__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash_range__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var lodash_range__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/range */ "./node_modules/lodash/range.js");
+/* harmony import */ var lodash_range__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_range__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
@@ -27039,6 +27037,10 @@ var originCoordinate = {
 // eslint-disable-next-line no-restricted-globals
 
 var isFinit = Number.isFinite ? Number.isFinite : isFinite;
+var defer = // eslint-disable-next-line no-nested-ternary
+typeof requestAnimationFrame === 'function' ? requestAnimationFrame : typeof setImmediate === 'function' ? setImmediate : setTimeout;
+var deferClear = // eslint-disable-next-line no-nested-ternary
+typeof cancelAnimationFrame === 'function' ? cancelAnimationFrame : typeof clearImmediate === 'function' ? clearImmediate : clearTimeout;
 
 var calculateTooltipPos = function calculateTooltipPos(rangeObj, layout) {
   if (layout === 'horizontal') {
@@ -27278,7 +27280,7 @@ var getAxisMapByAxes = function getAxisMapByAxes(props, _ref2) {
           if (allowDuplicatedCategory && duplicate) {
             duplicateDomain = domain; // When category axis has duplicated text, serial numbers are used to generate scale
 
-            domain = lodash_range__WEBPACK_IMPORTED_MODULE_7___default()(0, len);
+            domain = lodash_range__WEBPACK_IMPORTED_MODULE_6___default()(0, len);
           } else if (!allowDuplicatedCategory) {
             // remove duplicated category
             domain = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.parseDomainOfCategoryAxis)(child.props.domain, domain, child).reduce(function (finalDomain, entry) {
@@ -27289,12 +27291,12 @@ var getAxisMapByAxes = function getAxisMapByAxes(props, _ref2) {
           // the field type is category data and this axis is numerical axis
           if (!allowDuplicatedCategory) {
             domain = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.parseDomainOfCategoryAxis)(child.props.domain, domain, child).reduce(function (finalDomain, entry) {
-              return finalDomain.indexOf(entry) >= 0 || entry === '' || lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(entry) ? finalDomain : [].concat(_toConsumableArray(finalDomain), [entry]);
+              return finalDomain.indexOf(entry) >= 0 || entry === '' || lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(entry) ? finalDomain : [].concat(_toConsumableArray(finalDomain), [entry]);
             }, []);
           } else {
             // eliminate undefined or null or empty string
             domain = domain.filter(function (entry) {
-              return entry !== '' && !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(entry);
+              return entry !== '' && !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(entry);
             });
           }
         } else if (type === 'number') {
@@ -27313,7 +27315,7 @@ var getAxisMapByAxes = function getAxisMapByAxes(props, _ref2) {
         }
       } else if (isCategorical) {
         // the axis is a categorical axis
-        domain = lodash_range__WEBPACK_IMPORTED_MODULE_7___default()(0, len);
+        domain = lodash_range__WEBPACK_IMPORTED_MODULE_6___default()(0, len);
       } else if (stackGroups && stackGroups[axisId] && stackGroups[axisId].hasStack && type === 'number') {
         // when stackOffset is 'expand', the domain may be calculated as [0, 1.000000000002]
         domain = stackOffset === 'expand' ? [0, 1] : (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.getDomainOfStackGroups)(stackGroups[axisId].stackGroups, dataStartIndex, dataEndIndex);
@@ -27401,7 +27403,7 @@ var getAxisMapByItems = function getAxisMapByItems(props, _ref3) {
       var domain;
 
       if (isCategorical) {
-        domain = lodash_range__WEBPACK_IMPORTED_MODULE_7___default()(0, len);
+        domain = lodash_range__WEBPACK_IMPORTED_MODULE_6___default()(0, len);
       } else if (stackGroups && stackGroups[axisId] && stackGroups[axisId].hasStack) {
         domain = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.getDomainOfStackGroups)(stackGroups[axisId].stackGroups, dataStartIndex, dataEndIndex);
         domain = (0,_util_DetectReferenceElementsDomain__WEBPACK_IMPORTED_MODULE_14__.detectReferenceElementsDomain)(children, domain, axisId, axisType);
@@ -27512,7 +27514,7 @@ var createDefaultState = function createDefaultState(props) {
     dataStartIndex: startIndex,
     dataEndIndex: endIndex,
     activeTooltipIndex: -1,
-    isTooltipActive: !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(defaultShowTooltip) ? defaultShowTooltip : false
+    isTooltipActive: !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(defaultShowTooltip) ? defaultShowTooltip : false
   };
 };
 
@@ -27688,7 +27690,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       if (itemIsBar) {
         var barBandSize = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.getBandSizeOfAxis)(cateAxis, cateTicks, true); // 如果是bar，计算bar的位置
 
-        var maxBarSize = lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(childMaxBarSize) ? globalMaxBarSize : childMaxBarSize;
+        var maxBarSize = lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(childMaxBarSize) ? globalMaxBarSize : childMaxBarSize;
         barPosition = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.getBarPosition)({
           barGap: barGap,
           barCategoryGap: barCategoryGap,
@@ -27825,7 +27827,16 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       _this.uniqueChartId = void 0;
       _this.clipPathId = void 0;
       _this.legendInstance = void 0;
+      _this.deferId = void 0;
       _this.container = void 0;
+
+      _this.clearDeferId = function () {
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(_this.deferId) && deferClear) {
+          deferClear(_this.deferId);
+        }
+
+        _this.deferId = null;
+      };
 
       _this.handleLegendBBoxUpdate = function (box) {
         if (box && _this.legendInstance) {
@@ -27848,61 +27859,12 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       };
 
       _this.handleReceiveSyncEvent = function (cId, chartId, data) {
-        var _this$props = _this.props,
-            syncId = _this$props.syncId,
-            layout = _this$props.layout;
-        var updateId = _this.state.updateId;
+        var syncId = _this.props.syncId;
 
         if (syncId === cId && chartId !== _this.uniqueChartId) {
-          var dataStartIndex = data.dataStartIndex,
-              dataEndIndex = data.dataEndIndex;
+          _this.clearDeferId();
 
-          if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(data.dataStartIndex) || !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(data.dataEndIndex)) {
-            _this.setState(_objectSpread({
-              dataStartIndex: dataStartIndex,
-              dataEndIndex: dataEndIndex
-            }, updateStateOfAxisMapsOffsetAndStackGroups({
-              props: _this.props,
-              dataStartIndex: dataStartIndex,
-              dataEndIndex: dataEndIndex,
-              updateId: updateId
-            }, _this.state)));
-          } else if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(data.activeTooltipIndex)) {
-            var chartX = data.chartX,
-                chartY = data.chartY,
-                activeTooltipIndex = data.activeTooltipIndex;
-            var _this$state2 = _this.state,
-                offset = _this$state2.offset,
-                tooltipTicks = _this$state2.tooltipTicks;
-
-            if (!offset) {
-              return;
-            }
-
-            var viewBox = _objectSpread(_objectSpread({}, offset), {}, {
-              x: offset.left,
-              y: offset.top
-            }); // When a categotical chart is combined with another chart, the value of chartX
-            // and chartY may beyond the boundaries.
-
-
-            var validateChartX = Math.min(chartX, viewBox.x + viewBox.width);
-            var validateChartY = Math.min(chartY, viewBox.y + viewBox.height);
-            var activeLabel = tooltipTicks[activeTooltipIndex] && tooltipTicks[activeTooltipIndex].value;
-            var activePayload = getTooltipContent(_this.state, _this.props.data, activeTooltipIndex);
-            var activeCoordinate = tooltipTicks[activeTooltipIndex] ? {
-              x: layout === 'horizontal' ? tooltipTicks[activeTooltipIndex].coordinate : validateChartX,
-              y: layout === 'horizontal' ? validateChartY : tooltipTicks[activeTooltipIndex].coordinate
-            } : originCoordinate;
-
-            _this.setState(_objectSpread(_objectSpread({}, data), {}, {
-              activeLabel: activeLabel,
-              activeCoordinate: activeCoordinate,
-              activePayload: activePayload
-            }));
-          } else {
-            _this.setState(data);
-          }
+          _this.deferId = defer && defer(_this.applySyncEvent.bind(_assertThisInitialized(_this), data));
         }
       };
 
@@ -28134,12 +28096,12 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       };
 
       _this.renderCursor = function (element) {
-        var _this$state3 = _this.state,
-            isTooltipActive = _this$state3.isTooltipActive,
-            activeCoordinate = _this$state3.activeCoordinate,
-            activePayload = _this$state3.activePayload,
-            offset = _this$state3.offset,
-            activeTooltipIndex = _this$state3.activeTooltipIndex;
+        var _this$state2 = _this.state,
+            isTooltipActive = _this$state2.isTooltipActive,
+            activeCoordinate = _this$state2.activeCoordinate,
+            activePayload = _this$state2.activePayload,
+            offset = _this$state2.offset,
+            activeTooltipIndex = _this$state2.activeTooltipIndex;
 
         if (!element || !element.props.cursor || !isTooltipActive || !activeCoordinate) {
           return null;
@@ -28220,13 +28182,13 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       };
 
       _this.renderGrid = function (element) {
-        var _this$state4 = _this.state,
-            xAxisMap = _this$state4.xAxisMap,
-            yAxisMap = _this$state4.yAxisMap,
-            offset = _this$state4.offset;
-        var _this$props2 = _this.props,
-            width = _this$props2.width,
-            height = _this$props2.height;
+        var _this$state3 = _this.state,
+            xAxisMap = _this$state3.xAxisMap,
+            yAxisMap = _this$state3.yAxisMap,
+            offset = _this$state3.offset;
+        var _this$props = _this.props,
+            width = _this$props.width,
+            height = _this$props.height;
         var xAxis = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.getAnyElementOfObject)(xAxisMap);
 
         var yAxisWithFiniteDomain = lodash_find__WEBPACK_IMPORTED_MODULE_1___default()(yAxisMap, function (axis) {
@@ -28253,9 +28215,9 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
 
       _this.renderPolarGrid = function (element) {
         var radialLines = element.props.radialLines;
-        var _this$state5 = _this.state,
-            radiusAxisMap = _this$state5.radiusAxisMap,
-            angleAxisMap = _this$state5.angleAxisMap;
+        var _this$state4 = _this.state,
+            radiusAxisMap = _this$state4.radiusAxisMap,
+            angleAxisMap = _this$state4.angleAxisMap;
         var radiusAxis = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.getAnyElementOfObject)(radiusAxisMap);
         var angleAxis = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.getAnyElementOfObject)(angleAxisMap);
         var cx = angleAxis.cx,
@@ -28280,10 +28242,10 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
 
       _this.renderLegend = function () {
         var formatedGraphicalItems = _this.state.formatedGraphicalItems;
-        var _this$props3 = _this.props,
-            children = _this$props3.children,
-            width = _this$props3.width,
-            height = _this$props3.height;
+        var _this$props2 = _this.props,
+            children = _this$props2.children,
+            width = _this$props2.width,
+            height = _this$props2.height;
         var margin = _this.props.margin || {};
         var legendWidth = width - (margin.left || 0) - (margin.right || 0);
         var props = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.getLegendProps)({
@@ -28319,12 +28281,12 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           return null;
         }
 
-        var _this$state6 = _this.state,
-            isTooltipActive = _this$state6.isTooltipActive,
-            activeCoordinate = _this$state6.activeCoordinate,
-            activePayload = _this$state6.activePayload,
-            activeLabel = _this$state6.activeLabel,
-            offset = _this$state6.offset;
+        var _this$state5 = _this.state,
+            isTooltipActive = _this$state5.isTooltipActive,
+            activeCoordinate = _this$state5.activeCoordinate,
+            activePayload = _this$state5.activePayload,
+            activeLabel = _this$state5.activeLabel,
+            offset = _this$state5.offset;
         return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_8__.cloneElement)(tooltipItem, {
           viewBox: _objectSpread(_objectSpread({}, offset), {}, {
             x: offset.left,
@@ -28338,14 +28300,14 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       };
 
       _this.renderBrush = function (element) {
-        var _this$props4 = _this.props,
-            margin = _this$props4.margin,
-            data = _this$props4.data;
-        var _this$state7 = _this.state,
-            offset = _this$state7.offset,
-            dataStartIndex = _this$state7.dataStartIndex,
-            dataEndIndex = _this$state7.dataEndIndex,
-            updateId = _this$state7.updateId; // TODO: update brush when children update
+        var _this$props3 = _this.props,
+            margin = _this$props3.margin,
+            data = _this$props3.data;
+        var _this$state6 = _this.state,
+            offset = _this$state6.offset,
+            dataStartIndex = _this$state6.dataStartIndex,
+            dataEndIndex = _this$state6.dataEndIndex,
+            updateId = _this$state6.updateId; // TODO: update brush when children update
 
         return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_8__.cloneElement)(element, {
           key: element.key || '_recharts-brush',
@@ -28368,10 +28330,10 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
         var _assertThisInitialize = _assertThisInitialized(_this),
             clipPathId = _assertThisInitialize.clipPathId;
 
-        var _this$state8 = _this.state,
-            xAxisMap = _this$state8.xAxisMap,
-            yAxisMap = _this$state8.yAxisMap,
-            offset = _this$state8.offset;
+        var _this$state7 = _this.state,
+            xAxisMap = _this$state7.xAxisMap,
+            yAxisMap = _this$state7.yAxisMap,
+            offset = _this$state7.offset;
         var _element$props = element.props,
             xAxisId = _element$props.xAxisId,
             yAxisId = _element$props.yAxisId;
@@ -28437,11 +28399,11 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           return null;
         }
 
-        var _this$state9 = _this.state,
-            isTooltipActive = _this$state9.isTooltipActive,
-            tooltipAxis = _this$state9.tooltipAxis,
-            activeTooltipIndex = _this$state9.activeTooltipIndex,
-            activeLabel = _this$state9.activeLabel;
+        var _this$state8 = _this.state,
+            isTooltipActive = _this$state8.isTooltipActive,
+            tooltipAxis = _this$state8.tooltipAxis,
+            activeTooltipIndex = _this$state8.activeTooltipIndex,
+            activeLabel = _this$state8.activeLabel;
         var children = _this.props.children;
         var tooltipItem = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_15__.findChildByType)(children, _component_Tooltip__WEBPACK_IMPORTED_MODULE_23__.Tooltip.displayName);
         var _item$props2 = item.props,
@@ -28454,10 +28416,10 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
         var hasActive = !hide && isTooltipActive && tooltipItem && activeDot && activeTooltipIndex >= 0;
         var isTooltipTriggerByClick = tooltipItem && tooltipItem.props.trigger === 'click';
         var itemEvents = isTooltipTriggerByClick ? {
-          onClick: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseEnter, null, item.props.onCLick)
+          onClick: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseEnter, null, element.props.onCLick)
         } : {
-          onMouseLeave: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseLeave, null, item.props.onMouseLeave),
-          onMouseEnter: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseEnter, null, item.props.onMouseEnter)
+          onMouseLeave: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseLeave, null, element.props.onMouseLeave),
+          onMouseEnter: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_13__.combineEventHandlers)(_this.handleItemMouseEnter, null, element.props.onMouseEnter)
         };
         var graphicalItem = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_8__.cloneElement)(element, _objectSpread(_objectSpread({}, item.props), itemEvents));
 
@@ -28479,7 +28441,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
             basePoint = isRange && baseLine && baseLine[activeTooltipIndex];
           }
 
-          if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(activePoint)) {
+          if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(activePoint)) {
             return [graphicalItem].concat(_toConsumableArray(_this.renderActivePoints({
               item: item,
               activePoint: activePoint,
@@ -28501,7 +28463,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
         return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_8__.cloneElement)(element, _objectSpread(_objectSpread({}, _this.props), _this.state));
       };
 
-      _this.uniqueChartId = lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(_props.id) ? (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.uniqueId)('recharts') : _props.id;
+      _this.uniqueChartId = lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(_props.id) ? (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.uniqueId)('recharts') : _props.id;
       _this.clipPathId = "".concat(_this.uniqueChartId, "-clip");
 
       if (_props.throttleDelay) {
@@ -28517,7 +28479,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
     _createClass(CategoricalChartWrapper, [{
       key: "componentDidMount",
       value: function componentDidMount() {
-        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(this.props.syncId)) {
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(this.props.syncId)) {
           this.addListener();
         }
       }
@@ -28525,19 +28487,21 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       key: "componentDidUpdate",
       value: function componentDidUpdate(prevProps) {
         // add syncId
-        if (lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(prevProps.syncId) && !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(this.props.syncId)) {
+        if (lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(prevProps.syncId) && !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(this.props.syncId)) {
           this.addListener();
         } // remove syncId
 
 
-        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(this.props.syncId) && lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(prevProps.syncId)) {
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(this.props.syncId) && lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(prevProps.syncId)) {
           this.removeListener();
         }
       }
     }, {
       key: "componentWillUnmount",
       value: function componentWillUnmount() {
-        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(this.props.syncId)) {
+        this.clearDeferId();
+
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(this.props.syncId)) {
           this.removeListener();
         }
 
@@ -28571,9 +28535,9 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           return null;
         }
 
-        var _this$state10 = this.state,
-            xAxisMap = _this$state10.xAxisMap,
-            yAxisMap = _this$state10.yAxisMap;
+        var _this$state9 = this.state,
+            xAxisMap = _this$state9.xAxisMap,
+            yAxisMap = _this$state9.yAxisMap;
 
         if (eventType !== 'axis' && xAxisMap && yAxisMap) {
           var xScale = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.getAnyElementOfObject)(xAxisMap).scale;
@@ -28598,10 +28562,10 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       key: "getCursorRectangle",
       value: function getCursorRectangle() {
         var layout = this.props.layout;
-        var _this$state11 = this.state,
-            activeCoordinate = _this$state11.activeCoordinate,
-            offset = _this$state11.offset,
-            tooltipAxisBandSize = _this$state11.tooltipAxisBandSize;
+        var _this$state10 = this.state,
+            activeCoordinate = _this$state10.activeCoordinate,
+            offset = _this$state10.offset,
+            tooltipAxisBandSize = _this$state10.tooltipAxisBandSize;
         var halfSize = tooltipAxisBandSize / 2;
         return {
           stroke: 'none',
@@ -28616,9 +28580,9 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       key: "getCursorPoints",
       value: function getCursorPoints() {
         var layout = this.props.layout;
-        var _this$state12 = this.state,
-            activeCoordinate = _this$state12.activeCoordinate,
-            offset = _this$state12.offset;
+        var _this$state11 = this.state,
+            activeCoordinate = _this$state11.activeCoordinate,
+            offset = _this$state11.offset;
         var x1, y1, x2, y2;
 
         if (layout === 'horizontal') {
@@ -28631,7 +28595,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           y2 = y1;
           x1 = offset.left;
           x2 = offset.left + offset.width;
-        } else if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(activeCoordinate.cx) || !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(activeCoordinate.cy)) {
+        } else if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(activeCoordinate.cx) || !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(activeCoordinate.cy)) {
           if (layout === 'centric') {
             var cx = activeCoordinate.cx,
                 cy = activeCoordinate.cy,
@@ -28685,9 +28649,9 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           } : null;
         }
 
-        var _this$state13 = this.state,
-            angleAxisMap = _this$state13.angleAxisMap,
-            radiusAxisMap = _this$state13.radiusAxisMap;
+        var _this$state12 = this.state,
+            angleAxisMap = _this$state12.angleAxisMap,
+            radiusAxisMap = _this$state12.radiusAxisMap;
 
         if (angleAxisMap && radiusAxisMap) {
           var angleAxis = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_11__.getAnyElementOfObject)(angleAxisMap);
@@ -28751,8 +28715,62 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
       value: function triggerSyncEvent(data) {
         var syncId = this.props.syncId;
 
-        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(syncId)) {
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(syncId)) {
           _util_Events__WEBPACK_IMPORTED_MODULE_25__.eventCenter.emit(_util_Events__WEBPACK_IMPORTED_MODULE_25__.SYNC_EVENT, syncId, this.uniqueChartId, data);
+        }
+      }
+    }, {
+      key: "applySyncEvent",
+      value: function applySyncEvent(data) {
+        var layout = this.props.layout;
+        var updateId = this.state.updateId;
+        var dataStartIndex = data.dataStartIndex,
+            dataEndIndex = data.dataEndIndex;
+
+        if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(data.dataStartIndex) || !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(data.dataEndIndex)) {
+          this.setState(_objectSpread({
+            dataStartIndex: dataStartIndex,
+            dataEndIndex: dataEndIndex
+          }, updateStateOfAxisMapsOffsetAndStackGroups({
+            props: this.props,
+            dataStartIndex: dataStartIndex,
+            dataEndIndex: dataEndIndex,
+            updateId: updateId
+          }, this.state)));
+        } else if (!lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(data.activeTooltipIndex)) {
+          var chartX = data.chartX,
+              chartY = data.chartY,
+              activeTooltipIndex = data.activeTooltipIndex;
+          var _this$state13 = this.state,
+              offset = _this$state13.offset,
+              tooltipTicks = _this$state13.tooltipTicks;
+
+          if (!offset) {
+            return;
+          }
+
+          var viewBox = _objectSpread(_objectSpread({}, offset), {}, {
+            x: offset.left,
+            y: offset.top
+          }); // When a categotical chart is combined with another chart, the value of chartX
+          // and chartY may beyond the boundaries.
+
+
+          var validateChartX = Math.min(chartX, viewBox.x + viewBox.width);
+          var validateChartY = Math.min(chartY, viewBox.y + viewBox.height);
+          var activeLabel = tooltipTicks[activeTooltipIndex] && tooltipTicks[activeTooltipIndex].value;
+          var activePayload = getTooltipContent(this.state, this.props.data, activeTooltipIndex);
+          var activeCoordinate = tooltipTicks[activeTooltipIndex] ? {
+            x: layout === 'horizontal' ? tooltipTicks[activeTooltipIndex].coordinate : validateChartX,
+            y: layout === 'horizontal' ? validateChartY : tooltipTicks[activeTooltipIndex].coordinate
+          } : originCoordinate;
+          this.setState(_objectSpread(_objectSpread({}, data), {}, {
+            activeLabel: activeLabel,
+            activeCoordinate: activeCoordinate,
+            activePayload: activePayload
+          }));
+        } else {
+          this.setState(data);
         }
       }
     }, {
@@ -28782,9 +28800,9 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
        * @return {ReactElement}       The instance of x-axes
        */
       value: function renderAxis(axisOptions, element, displayName, index) {
-        var _this$props5 = this.props,
-            width = _this$props5.width,
-            height = _this$props5.height;
+        var _this$props4 = this.props,
+            width = _this$props4.width,
+            height = _this$props4.height;
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8__.createElement(_cartesian_CartesianAxis__WEBPACK_IMPORTED_MODULE_18__.CartesianAxis, _extends({}, axisOptions, {
           className: "recharts-".concat(axisOptions.axisType, " ").concat(axisOptions.axisType),
           key: element.key || "".concat(displayName, "-").concat(index),
@@ -28830,14 +28848,14 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           return null;
         }
 
-        var _this$props6 = this.props,
-            children = _this$props6.children,
-            className = _this$props6.className,
-            width = _this$props6.width,
-            height = _this$props6.height,
-            style = _this$props6.style,
-            compact = _this$props6.compact,
-            others = _objectWithoutProperties(_this$props6, ["children", "className", "width", "height", "style", "compact"]);
+        var _this$props5 = this.props,
+            children = _this$props5.children,
+            className = _this$props5.className,
+            width = _this$props5.width,
+            height = _this$props5.height,
+            style = _this$props5.style,
+            compact = _this$props5.compact,
+            others = _objectWithoutProperties(_this$props5, ["children", "className", "width", "height", "style", "compact"]);
 
         var attrs = (0,_util_types__WEBPACK_IMPORTED_MODULE_12__.filterProps)(others);
         var map = {
@@ -28956,7 +28974,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
         stackOffset = nextProps.stackOffset,
         margin = nextProps.margin;
 
-    if (lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(prevState.updateId)) {
+    if (lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(prevState.updateId)) {
       var defaultState = createDefaultState(nextProps);
       return _objectSpread(_objectSpread(_objectSpread({}, defaultState), {}, {
         updateId: 0
@@ -29011,7 +29029,7 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
 
     if (!(0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_15__.isChildrenEqual)(children, prevState.prevChildren)) {
       // update configuration in chilren
-      var hasGlobalData = !lodash_isNil__WEBPACK_IMPORTED_MODULE_6___default()(data);
+      var hasGlobalData = !lodash_isNil__WEBPACK_IMPORTED_MODULE_7___default()(data);
       var newUpdateId = hasGlobalData ? prevState.updateId : prevState.updateId + 1;
       return _objectSpread(_objectSpread({
         updateId: newUpdateId
@@ -34554,7 +34572,7 @@ if (eventCenter.setMaxListeners) {
 }
 
 
-var SYNC_EVENT = 'recharts.syncMouseEvents';
+var SYNC_EVENT = 'recharts.syncMouseEvents'; // eslint-disable-next-line no-redeclare
 
 /***/ }),
 

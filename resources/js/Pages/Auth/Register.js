@@ -101,7 +101,7 @@ export default (props) => {
                 </label>
             </div>
             <button className="au-btn au-btn--block au-btn--green m-b-20" type="submit">
-                egister
+                Register
             </button>
         </form>
 

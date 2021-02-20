@@ -22,6 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_FrontLayout__WEBPACK_IMPORTED_MODULE_4__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -62,12 +63,17 @@ __webpack_require__.r(__webpack_exports__);
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
               className: "card-footer",
-              children: data.nilai.selesai == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
-                onClick: function onClick() {
-                  return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('ujian.konfirmasi', data.kategori.id));
-                },
-                className: "btn btn-success btn-block",
-                children: "Kerjakan"
+              children: data.nilai.selesai == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                children: new Date() >= new Date(data.kategori.mulai) && new Date() <= new Date(data.kategori.selesai) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                  onClick: function onClick() {
+                    return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('ujian.konfirmasi', data.kategori.id));
+                  },
+                  className: "btn btn-success btn-block",
+                  children: "Kerjakan"
+                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                  className: "btn btn-success btn-block disabled",
+                  children: "Kerjakan"
+                })
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
                 className: "btn btn-primary btn-block disabled",
                 children: data.nilai.selesai

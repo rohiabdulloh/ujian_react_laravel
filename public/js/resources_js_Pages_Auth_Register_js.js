@@ -157,7 +157,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
                   className: "au-btn au-btn--block au-btn--green m-b-20",
                   type: "submit",
-                  children: "egister"
+                  children: "Register"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                 className: "register-link",

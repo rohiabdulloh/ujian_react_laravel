@@ -16,9 +16,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var react_countdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-countdown */ "./node_modules/react-countdown/dist/index.es.js");
-/* harmony import */ var _Shared_UjianLayout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Shared/UjianLayout */ "./resources/js/Shared/UjianLayout.js");
-/* harmony import */ var _Shared_Modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../Shared/Modal */ "./resources/js/Shared/Modal.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_countdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-countdown */ "./node_modules/react-countdown/dist/index.es.js");
+/* harmony import */ var _Shared_UjianLayout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../Shared/UjianLayout */ "./resources/js/Shared/UjianLayout.js");
+/* harmony import */ var _Shared_Modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../Shared/Modal */ "./resources/js/Shared/Modal.js");
 
 
 
@@ -39,6 +41,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -72,6 +75,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       waktu = _useState4[0],
       setWaktu = _useState4[1];
 
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      counter = _useState6[0],
+      setCounter = _useState6[1];
+
   function handleOpenModal(isConfirm, text, link) {
     setModal({
       open: true,
@@ -87,8 +95,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         open: false
       });
     });
-  }
+  } //update durasi
 
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    setCounter(counter + 1);
+    if (counter % 10 == 1) axios__WEBPACK_IMPORTED_MODULE_5___default().put(route('ujian.update', nilai.id), {
+      durasi: waktu
+    });
+  }, [waktu]);
   var pilihan = [];
 
   if (soal !== null) {
@@ -115,7 +130,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     }];
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_UjianLayout__WEBPACK_IMPORTED_MODULE_6__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_UjianLayout__WEBPACK_IMPORTED_MODULE_7__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.default, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
         children: "Konfirmasi Ujian"
@@ -130,7 +145,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             className: "card-header",
             children: ["Soal No. ", nosoal, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
               className: "btn btn-primary btn-sm float-right",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_countdown__WEBPACK_IMPORTED_MODULE_5__.default, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_countdown__WEBPACK_IMPORTED_MODULE_6__.default, {
                 date: Date.now() + waktu,
                 renderer: function renderer(_ref) {
                   var hours = _ref.hours,
@@ -149,7 +164,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                   }
                 },
                 onTick: function onTick() {
-                  return setWaktu(waktu - 1000);
+                  setWaktu(waktu - 1000);
                 },
                 onStop: function onStop() {
                   return handleOpenModal(false, "Waktu ujian sudah berakhir", route('ujian.selesai', kategori.id));
@@ -306,7 +321,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
           })]
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Shared_Modal__WEBPACK_IMPORTED_MODULE_7__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Shared_Modal__WEBPACK_IMPORTED_MODULE_8__.default, {
       modal: modal,
       closeModal: handleCloseModal
     })]

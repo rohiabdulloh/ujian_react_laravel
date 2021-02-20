@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
+use Redirect;
+use Request;
 class ForgotPasswordController extends Controller
 {
     /*
@@ -23,4 +26,5 @@ class ForgotPasswordController extends Controller
     public function showEmailForm(){
        return Inertia::render('Auth/Email');
     }
+    
 }

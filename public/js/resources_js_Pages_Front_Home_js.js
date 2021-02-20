@@ -49,7 +49,7 @@ var Home = function Home(props) {
         children: "Home"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-      "class": "row",
+      className: "row",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InfoDashboard, {
         icon: "fa-list-alt",
         title1: props.siswa.no_ujian,

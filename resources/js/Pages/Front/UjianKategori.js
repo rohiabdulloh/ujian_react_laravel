@@ -27,9 +27,17 @@ export default (props) => {
                 </div>
                 <div className="card-footer">
                     {data.nilai.selesai==null ? (
-                        <a onClick={()=>Inertia.get(route('ujian.konfirmasi', data.kategori.id))} className="btn btn-success btn-block">
-                            Kerjakan
-                        </a>    
+                      <>
+                        {(new Date() >= new Date(data.kategori.mulai) && new Date() <= new Date (data.kategori.selesai)) ? (
+                          <a onClick={()=>Inertia.get(route('ujian.konfirmasi', data.kategori.id))} className="btn btn-success btn-block">
+                              Kerjakan
+                          </a>
+                        ):(
+                          <a className="btn btn-success btn-block disabled">
+                              Kerjakan
+                          </a>
+                        )}   
+                      </>
                     ):(
                         <a className="btn btn-primary btn-block disabled">
                             {data.nilai.selesai}

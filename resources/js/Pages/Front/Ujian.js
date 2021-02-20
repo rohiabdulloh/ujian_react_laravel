@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Helmet from 'react-helmet';
 import { Inertia } from '@inertiajs/inertia';
 import { usePage } from '@inertiajs/inertia-react';
+import axios from 'axios';
 import Countdown from 'react-countdown';
 
 
@@ -25,6 +26,7 @@ export default (props) => {
 
   const durasi = flash.duarsi!=null ? flash.durasi : nilai.durasi;
   const [waktu, setWaktu] = useState(durasi);
+  const [counter, setCounter] = useState(0);
 
     function handleOpenModal(isConfirm, text, link){
         setModal({
@@ -41,6 +43,13 @@ export default (props) => {
             open: false
         }));
     }
+
+    //update durasi
+    useEffect(() => {
+        setCounter(counter+1);
+        if(counter%10==1) axios.put(route('ujian.update', nilai.id), {durasi: waktu});
+    }, [waktu]);
+
 
   let pilihan = [];
   if(soal !== null){
@@ -76,7 +85,7 @@ export default (props) => {
                                     return <span>{hours}:{minutes}:{seconds}</span>;
                                 }
                             }}
-                            onTick={()=>setWaktu(waktu-1000)}
+                            onTick={()=>{setWaktu(waktu-1000)}}
                             onStop={()=>handleOpenModal(
                                 false,
                                 "Waktu ujian sudah berakhir",

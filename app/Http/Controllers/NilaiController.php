@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Nilai;
 use App\Models\Kategori;
 use Inertia\Inertia;
+use App\Exports\ExportNilai;
 
 use Redirect;
+use Excel;
 
 class NilaiController extends Controller
 {
@@ -43,4 +45,12 @@ class NilaiController extends Controller
         ]);
     }
 
+    public function export($id){
+        $kategori = Kategori::find($id);
+        if($kategori !== null) $file = $kategori->nama_kategori;
+        else $file = "Semua_Kategori";
+        
+        $nilai = new ExportNilai($id);
+        return Excel::download($nilai, 'Data_Nilai_'.$file.'.xlsx');
+    }
 }

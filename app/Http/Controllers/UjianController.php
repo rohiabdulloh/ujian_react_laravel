@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 use Auth;
 use Redirect;
+use Response;
 use Carbon\Carbon;
 class UjianController extends Controller
 {
@@ -152,12 +153,21 @@ class UjianController extends Controller
         }
     }
 
+    public function update_durasi(Request $rq, $id)
+    {
+        $nilai = Nilai::find($id);
+        $nilai->durasi = $rq->durasi;
+        $nilai->update();
+
+        return Response::json(['success'=> true]);
+    }
+
     public function halaman(Request $rq, $page){
         return Redirect::route('ujian', $page)
             ->with(['durasi' => $rq->durasi]);
     }
 
-
+    
     public function jawab(Request $rq){
         $idsoal = $rq->soal;
         $jawab = $rq->jawab;
@@ -217,7 +227,7 @@ class UjianController extends Controller
         $nilai->update();
 
         $rq->session()->forget('ujian');
-        return Redirect::route('ujian.hasil', $ujian);
+        return Redirect::route('ujian.kategori');
     }
 
     public function hasil($id){

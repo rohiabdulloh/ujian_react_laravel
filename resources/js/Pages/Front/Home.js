@@ -24,7 +24,7 @@ const Home = (props) => {
         <title>Home</title>
       </Helmet>
 
-      <div class="row">
+      <div className="row">
         <InfoDashboard  
           icon='fa-list-alt'
           title1={props.siswa.no_ujian}

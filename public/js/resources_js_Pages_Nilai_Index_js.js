@@ -309,9 +309,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             style: {
               padding: 30
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
               className: "table-data__tool",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
                 className: "table-data__tool-left",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
                   name: "kategori",
@@ -329,7 +329,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                     }, kat.no);
                   })]
                 })
-              })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                className: "table-data__tool-right",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
+                  href: route('nilai.export', kategori),
+                  className: "au-btn au-btn-icon au-btn--green au-btn--small",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("i", {
+                    className: "fas fa-file-excel"
+                  }), " Export"]
+                })
+              })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
               className: "table-responsive table-data",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(mdbreact__WEBPACK_IMPORTED_MODULE_4__.MDBDataTable, {
