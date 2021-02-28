@@ -92,10 +92,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                   className: "form-group",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("label", {
-                    children: "Username"
+                    children: "Name"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
                     type: "text",
-                    placeholder: "Username",
+                    placeholder: "Name",
                     className: "au-input au-input--full " + ('name' in props.errors ? 'is-invalid' : ''),
                     name: "name",
                     value: values.name,
@@ -146,14 +146,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                     value: values.password_confirmation,
                     onChange: handleChange
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-                  className: "login-checkbox",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
-                      type: "checkbox",
-                      name: "aggree"
-                    }), "Agree the terms and policy"]
-                  })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
                   className: "au-btn au-btn--block au-btn--green m-b-20",
                   type: "submit",

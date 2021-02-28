@@ -104,6 +104,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       durasi: waktu
     });
   }, [waktu]);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    return function () {
+      window.addEventListener('beforeunload', function (event) {
+        event.preventDefault();
+        event.returnValue = '';
+      });
+    };
+  });
   var pilihan = [];
 
   if (soal !== null) {
@@ -133,7 +141,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Shared_UjianLayout__WEBPACK_IMPORTED_MODULE_7__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.default, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: "Konfirmasi Ujian"
+        children: "Halaman Ujian"
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
       className: "row",
@@ -173,7 +181,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             style: {
-              height: 360,
+              height: 450,
               overflowY: 'auto'
             },
             className: "card-body",
@@ -269,7 +277,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
             style: {
-              height: 360,
+              height: 450,
               overflowY: 'auto'
             },
             className: "card-body",

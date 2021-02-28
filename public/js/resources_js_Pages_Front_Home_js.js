@@ -289,7 +289,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "image img-cir img-120",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-            src: "/images/icon/" + user.picture,
+            src: "/images/user/" + user.picture,
             alt: user.name,
             width: "100%",
             height: "100%"
@@ -439,7 +439,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "image img-cir img-120",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-            src: "/images/icon/" + user.picture,
+            src: "/images/user/" + user.picture,
             alt: user.name,
             width: "100%",
             height: "100%"

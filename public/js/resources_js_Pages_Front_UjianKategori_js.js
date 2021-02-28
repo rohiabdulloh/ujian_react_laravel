@@ -64,18 +64,31 @@ __webpack_require__.r(__webpack_exports__);
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
               className: "card-footer",
               children: data.nilai.selesai == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                children: new Date() >= new Date(data.kategori.mulai) && new Date() <= new Date(data.kategori.selesai) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
-                  onClick: function onClick() {
-                    return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('ujian.konfirmasi', data.kategori.id));
-                  },
-                  className: "btn btn-success btn-block",
-                  children: "Kerjakan"
-                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
-                  className: "btn btn-success btn-block disabled",
-                  children: "Kerjakan"
+                children: new Date() >= new Date(data.kategori.mulai) && new Date() <= new Date(data.kategori.selesai) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                  children: data.nilai.mulai == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                    onClick: function onClick() {
+                      return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('ujian.konfirmasi', data.kategori.id));
+                    },
+                    className: "btn btn-success btn-block",
+                    children: "Kerjakan"
+                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                    onClick: function onClick() {
+                      return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.get(route('ujian.konfirmasi', data.kategori.id));
+                    },
+                    className: "btn btn-warning btn-block",
+                    children: "Sedang Kerjakan"
+                  })
+                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                  children: [new Date() < new Date(data.kategori.mulai) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                    className: "btn btn-secondary btn-block disabled",
+                    children: "Belum Mulai"
+                  }), new Date() > new Date(data.kategori.selesai) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
+                    className: "btn btn-secondary btn-block disabled",
+                    children: "Waktu Terlewat"
+                  })]
                 })
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", {
-                className: "btn btn-primary btn-block disabled",
+                className: "btn btn-danger btn-block disabled",
                 children: data.nilai.selesai
               })
             })]
@@ -296,7 +309,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "image img-cir img-120",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-            src: "/images/icon/" + user.picture,
+            src: "/images/user/" + user.picture,
             alt: user.name,
             width: "100%",
             height: "100%"
@@ -446,7 +459,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
           className: "image img-cir img-120",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("img", {
-            src: "/images/icon/" + user.picture,
+            src: "/images/user/" + user.picture,
             alt: user.name,
             width: "100%",
             height: "100%"

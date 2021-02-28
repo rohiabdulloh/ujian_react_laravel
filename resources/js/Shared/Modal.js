@@ -30,6 +30,7 @@ export default ({modal, closeModal}) => {
                     ):(
                         <button onClick={handleYakin} type="button" className="btn btn-danger btn-md">OK</button>
                     )}
+
                 </div>
             </div>
         </div>

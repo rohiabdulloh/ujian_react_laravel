@@ -29,17 +29,35 @@ export default (props) => {
                     {data.nilai.selesai==null ? (
                       <>
                         {(new Date() >= new Date(data.kategori.mulai) && new Date() <= new Date (data.kategori.selesai)) ? (
-                          <a onClick={()=>Inertia.get(route('ujian.konfirmasi', data.kategori.id))} className="btn btn-success btn-block">
+                          <>
+                          {data.nilai.mulai == null ? (
+                            <a onClick={()=>Inertia.get(route('ujian.konfirmasi', data.kategori.id))} className="btn btn-success btn-block">
                               Kerjakan
-                          </a>
+                            </a>
+                          ):(
+                            <a onClick={()=>Inertia.get(route('ujian.konfirmasi', data.kategori.id))} className="btn btn-warning btn-block">
+                              Sedang Kerjakan
+                            </a>
+                          )}
+                          </>
                         ):(
-                          <a className="btn btn-success btn-block disabled">
-                              Kerjakan
-                          </a>
+                          <>
+                          { new Date() < new Date(data.kategori.mulai) && (
+                            <a className="btn btn-secondary btn-block disabled">
+                                Belum Mulai
+                            </a>
+                          )}
+
+                          { new Date() > new Date(data.kategori.selesai) && (
+                            <a className="btn btn-secondary btn-block disabled">
+                                Waktu Terlewat
+                            </a>
+                          )}
+                          </>
                         )}   
                       </>
                     ):(
-                        <a className="btn btn-primary btn-block disabled">
+                        <a className="btn btn-danger btn-block disabled">
                             {data.nilai.selesai}
                         </a> 
                     )}   

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Siswa;
 use App\Models\User;
 use Inertia\Inertia;
+use App\Exports\ExportPeserta;
+use Excel;
 
 use Redirect;
 
@@ -31,6 +33,12 @@ class SiswaController extends Controller
 
     	return Redirect::route('siswa.index')
            ->with(['message'=>'Data berhasil dihapus']);
+    }
+
+
+    public function export(){
+        $siswa = new ExportPeserta();
+        return Excel::download($siswa, 'Data_Peserta.xlsx');
     }
 
 }

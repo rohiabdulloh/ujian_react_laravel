@@ -79,8 +79,17 @@ export default (props) => {
             <h3 className="title-3">
                 Peserta Ujian
             </h3>
-
+            
             <div  style={{padding: 30}}>
+              <div className="table-data__tool">
+                
+                <div className="table-data__tool-left"></div>
+                <div className="table-data__tool-right">
+                  <a href={route('siswa.export')} className="au-btn au-btn-icon au-btn--green au-btn--small">
+                      <i className="fas fa-file-excel"></i> Export
+                  </a>
+                </div>
+              </div>
 
               {/* tabel data responsive */}
               <div className="table-responsive table-data">            

@@ -50,6 +50,8 @@ Route::group(['middleware' => ['auth','ceklevel:1']], function(){
     
 	Route::resource('/kategori', KategoriController::class);
     Route::resource('/soal', SoalController::class);
+
+    Route::get('/siswa/export', [SiswaController::class, 'export'])->name('siswa.export');
     Route::resource('/siswa', SiswaController::class);
 
     Route::get('/nilai/export/{id}', [NilaiController::class, 'export'])->name('nilai.export');

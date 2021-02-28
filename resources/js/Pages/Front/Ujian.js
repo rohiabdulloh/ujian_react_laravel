@@ -50,6 +50,14 @@ export default (props) => {
         if(counter%10==1) axios.put(route('ujian.update', nilai.id), {durasi: waktu});
     }, [waktu]);
 
+    useEffect(() => {
+        return () => {
+            window.addEventListener('beforeunload', function(event){
+                event.preventDefault();
+                event.returnValue = '';
+             })
+        }
+    })
 
   let pilihan = [];
   if(soal !== null){
@@ -65,7 +73,7 @@ export default (props) => {
   return (
     <Layout>
       <Helmet>
-        <title>Konfirmasi Ujian</title>
+        <title>Halaman Ujian</title>
       </Helmet>
       <div className="row">
 
@@ -94,7 +102,7 @@ export default (props) => {
                         />
                     </button>
                 </div>
-                <div  style={{height: 360, overflowY: 'auto'}} className="card-body" >
+                <div  style={{height: 450, overflowY: 'auto'}} className="card-body" >
                     <div dangerouslySetInnerHTML={{__html: soal.soal}}></div>
                     <table>
                         <tbody>
@@ -150,7 +158,7 @@ export default (props) => {
                 <div className="card-header" style={{textAlign:"center"}}>
                    <div align="center" className="badge badge-primary"> {props.dikerjakan} dikerjakan</div>
                 </div>
-                <div  style={{height: 360, overflowY: 'auto'}} className="card-body" >
+                <div  style={{height: 450, overflowY: 'auto'}} className="card-body" >
         
                     {semuasoal.map((so, index)=>(
                         <div key={so.id} width="20%" style={{width: "20%", float:"left"}}>
