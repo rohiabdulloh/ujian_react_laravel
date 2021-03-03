@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Helmet from 'react-helmet';
 import { Inertia } from '@inertiajs/inertia';
 import { usePage } from '@inertiajs/inertia-react';
+import axios from 'axios';
 import Countdown from 'react-countdown';
 
 
@@ -25,6 +26,7 @@ export default (props) => {
 
   const durasi = flash.duarsi!=null ? flash.durasi : nilai.durasi;
   const [waktu, setWaktu] = useState(durasi);
+  const [counter, setCounter] = useState(0);
 
     function handleOpenModal(isConfirm, text, link){
         setModal({
@@ -42,6 +44,21 @@ export default (props) => {
         }));
     }
 
+    //update durasi
+    useEffect(() => {
+        setCounter(counter+1);
+        if(counter%10==1) axios.put(route('ujian.update', nilai.id), {durasi: waktu});
+    }, [waktu]);
+
+    useEffect(() => {
+        return () => {
+            window.addEventListener('beforeunload', function(event){
+                event.preventDefault();
+                event.returnValue = '';
+             })
+        }
+    })
+
   let pilihan = [];
   if(soal !== null){
     pilihan = [
@@ -56,7 +73,7 @@ export default (props) => {
   return (
     <Layout>
       <Helmet>
-        <title>Konfirmasi Ujian</title>
+        <title>Halaman Ujian</title>
       </Helmet>
       <div className="row">
 
@@ -76,7 +93,7 @@ export default (props) => {
                                     return <span>{hours}:{minutes}:{seconds}</span>;
                                 }
                             }}
-                            onTick={()=>setWaktu(waktu-1000)}
+                            onTick={()=>{setWaktu(waktu-1000)}}
                             onStop={()=>handleOpenModal(
                                 false,
                                 "Waktu ujian sudah berakhir",
@@ -85,7 +102,7 @@ export default (props) => {
                         />
                     </button>
                 </div>
-                <div  style={{height: 360, overflowY: 'auto'}} className="card-body" >
+                <div  style={{height: 450, overflowY: 'auto'}} className="card-body" >
                     <div dangerouslySetInnerHTML={{__html: soal.soal}}></div>
                     <table>
                         <tbody>
@@ -141,7 +158,7 @@ export default (props) => {
                 <div className="card-header" style={{textAlign:"center"}}>
                    <div align="center" className="badge badge-primary"> {props.dikerjakan} dikerjakan</div>
                 </div>
-                <div  style={{height: 360, overflowY: 'auto'}} className="card-body" >
+                <div  style={{height: 450, overflowY: 'auto'}} className="card-body" >
         
                     {semuasoal.map((so, index)=>(
                         <div key={so.id} width="20%" style={{width: "20%", float:"left"}}>

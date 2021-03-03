@@ -45,8 +45,12 @@ class NilaiController extends Controller
         ]);
     }
 
-    public function export(){
-        $nilai = new ExportNilai();
-        return Excel::download($nilai, 'data_nilai.xlsx');
+    public function export($id){
+        $kategori = Kategori::find($id);
+        if($kategori !== null) $file = $kategori->nama_kategori;
+        else $file = "Semua_Kategori";
+        
+        $nilai = new ExportNilai($id);
+        return Excel::download($nilai, 'Data_Nilai_'.$file.'.xlsx');
     }
 }

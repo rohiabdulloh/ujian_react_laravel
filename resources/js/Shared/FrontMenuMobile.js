@@ -34,7 +34,7 @@ export default (props) => {
         <div className="menu-sidebar2__content js-scrollbar2 ps">
             <div className="account2">
               <div className="image img-cir img-120">
-                  <img src={"/images/icon/"+user.picture} alt={user.name} width="100%" height="100%"/>
+                  <img src={"/images/user/"+user.picture} alt={user.name} width="100%" height="100%"/>
               </div>
               <h4 className="name">{user.name}</h4>
               <a href="#" onClick={()=>Inertia.post("logout")}>Sign out</a>

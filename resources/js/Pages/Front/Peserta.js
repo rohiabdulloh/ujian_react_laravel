@@ -25,8 +25,8 @@ export default (props) => {
     kelas: siswa.kelas || "",
     asal_sekolah: siswa.asal_sekolah || "",
     jenis_kelamin: siswa.jenis_kelamin || "",
-    picture: user.picture || "",
-    url_picture: "/images/icon/"+user.picture|| "",
+    //picture: user.picture || "",
+    //url_picture: "/images/icon/"+user.picture|| "",
   });
 
   //menangani perubahan nilai input pada form
@@ -52,6 +52,7 @@ export default (props) => {
     {label: 'Asal Sekolah', name: 'asal_sekolah'},
   ];
 
+/*
   //menangani upload file
   const inputFile = useRef(null);
   function buttonClick(){
@@ -68,6 +69,7 @@ export default (props) => {
       url_picture: imgsrc, //ubah foto yang ditampilkan dg yg akan diupload
     }))
   }
+*/
 
   //mengirim data ketika form submit
   function handleSubmit(e){
@@ -153,6 +155,7 @@ export default (props) => {
                             </div>
                         )) }
 
+                      {/*
                         <div className="row form-group">
                             <div className="col col-md-3">
                                 <label htmlFor="picture" className=" form-control-label">Foto User</label>
@@ -177,6 +180,7 @@ export default (props) => {
                                 )}
                             </div>
                         </div>
+                      */}
                     </div>
                 </div>
 

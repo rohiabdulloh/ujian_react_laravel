@@ -8,16 +8,26 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class ExportNilai implements FromArray, ShouldAutoSize
 {
+    protected $id;
+    public function __construct($id)
+    {
+        $this->id = $id; 
+    }
+
     public function array(): array
     {
         $nilai = Nilai::leftJoin('users', 'users.id', '=', 'nilai.id_user')
             ->leftJoin('siswa','siswa.id_user','=','nilai.id_user')
-            ->select('siswa.nis', 'siswa.nama_siswa', 'nilai.*')
-            ->orderBy('id', 'desc')->get();
+            ->select('siswa.nis', 'siswa.nama_siswa', 'nilai.*');
+
+        if($this->id!=0)   $nilai = $nilai->where('nilai.id_kategori','=',$this->id);
+            
+        $nilai = $nilai->orderBy('id', 'desc')->get();
 
         $data = array();
         $data[] = array(
             "NO", 
+            "KATEGORI",
             "NIS", 
             "NAMA SISWA", 
             "MULAI",
@@ -30,6 +40,7 @@ class ExportNilai implements FromArray, ShouldAutoSize
         	$no++;
         	$row = array();
         	$row[]            = $no;
+            $row[]            = $list->kategori->nama_kategori;
             $row[]            = $list->nis;
         	$row[]            = $list->nama_siswa;
             $row[]            = $list->mulai;

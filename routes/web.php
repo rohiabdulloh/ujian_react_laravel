@@ -50,9 +50,11 @@ Route::group(['middleware' => ['auth','ceklevel:1']], function(){
     
 	Route::resource('/kategori', KategoriController::class);
     Route::resource('/soal', SoalController::class);
+
+    Route::get('/siswa/export', [SiswaController::class, 'export'])->name('siswa.export');
     Route::resource('/siswa', SiswaController::class);
 
-    Route::get('/nilai/export', [NilaiController::class, 'export'])->name('nilai.export');
+    Route::get('/nilai/export/{id}', [NilaiController::class, 'export'])->name('nilai.export');
     Route::resource('/nilai', NilaiController::class);
     Route::resource('/pesan', KontakController::class);
     
@@ -74,7 +76,8 @@ Route::group(['middleware' => ['auth','ceklevel:0,1']], function(){
     
     Route::get('/ujian', [UjianController::class, 'kategori'])->name('ujian.kategori');
     Route::get('/ujian/{id}/konfirmasi', [UjianController::class, 'konfirmasi'])->name('ujian.konfirmasi');
-
+    
+    Route::put('/ujian/{id}/update', [UjianController::class, 'update_durasi'])->name('ujian.update');
     Route::post('/ujian/{id}/jawab', [UjianController::class, 'jawab'])->name('ujian.jawab');
     Route::put('/ujian/{id}/selesai', [UjianController::class, 'selesai'])->name('ujian.selesai');
     Route::post('/ujian/{id}', [UjianController::class, 'mulai'])->name('ujian.mulai');

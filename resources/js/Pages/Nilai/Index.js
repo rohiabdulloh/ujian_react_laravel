@@ -83,7 +83,7 @@ export default (props) => {
                 </div>
 
                 <div className="table-data__tool-right">
-                  <a href={route('nilai.export')} target="_blank" className="au-btn au-btn-icon au-btn--green au-btn--small">
+                  <a href={route('nilai.export', kategori)} className="au-btn au-btn-icon au-btn--green au-btn--small">
                       <i className="fas fa-file-excel"></i> Export
                   </a>
                 </div>

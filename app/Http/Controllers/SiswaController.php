@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Siswa;
 use App\Models\User;
 use Inertia\Inertia;
+use App\Exports\ExportPeserta;
+use Excel;
 
 use Redirect;
 
@@ -15,6 +17,7 @@ class SiswaController extends Controller
     public function index()
     {
         $siswa = Siswa::leftJoin('users', 'users.id', '=', 'siswa.id_user')
+            ->where('users.level', '=,', 0)
             ->select('siswa.*', 'users.picture', 'users.email')
             ->orderBy('siswa.id', 'desc')->get();
 
@@ -30,6 +33,12 @@ class SiswaController extends Controller
 
     	return Redirect::route('siswa.index')
            ->with(['message'=>'Data berhasil dihapus']);
+    }
+
+
+    public function export(){
+        $siswa = new ExportPeserta();
+        return Excel::download($siswa, 'Data_Peserta.xlsx');
     }
 
 }

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 use Auth;
 use Redirect;
+use Response;
 use Carbon\Carbon;
 class UjianController extends Controller
 {
@@ -99,7 +100,7 @@ class UjianController extends Controller
                 ['id_soal', '=', $s->id]
             ])->count();
 
-            if($jmljawaban == 0){
+            if($jmljawaban < 1){
                 $jawaban = new Jawaban;
                 $jawaban->id_user = Auth::user()->id;
                 $jawaban->id_soal = $s->id;
@@ -122,18 +123,31 @@ class UjianController extends Controller
             return Redirect::route('ujian.kategori');
         }else{
            $kategori = Kategori::find($ujian);
-           $qsoal = Jawaban::leftJoin('soal', 'jawaban.id_soal', '=', 'soal.id')
-             ->where([
-                 ['soal.id_kategori','=', $ujian],
-                 ['jawaban.id_user', '=', Auth::user()->id]
-             ])
-             ->select('soal.*', 'jawaban.jawaban');
-            
-            $qjawaban = $qsoal;
+            $semuasoal = Jawaban::leftJoin('soal', 'jawaban.id_soal', '=', 'soal.id')
+                    ->where([
+                        ['soal.id_kategori','=', $ujian],
+                        ['jawaban.id_user', '=', Auth::user()->id]
+                    ])
+                    ->select('soal.*', 'jawaban.jawaban', 'jawaban.urut')
+                    ->get();
 
-            $semuasoal = $qsoal->get();
-            $soalaktif = $qsoal->where('jawaban.urut','=',$page)->first();
-            $dikerjakan = $qsoal->where('jawaban.jawaban','!=',0)->count();
+            $dikerjakan = Jawaban::leftJoin('soal', 'jawaban.id_soal', '=', 'soal.id')
+                    ->where([
+                        ['soal.id_kategori','=', $ujian],
+                        ['jawaban.id_user', '=', Auth::user()->id]
+                    ])
+                    ->select('soal.*', 'jawaban.jawaban', 'jawaban.urut')
+                    ->where('jawaban.jawaban','!=',0)
+                    ->count();
+
+            $soalaktif = Jawaban::leftJoin('soal', 'jawaban.id_soal', '=', 'soal.id')
+                    ->where([
+                        ['soal.id_kategori','=', $ujian],
+                        ['jawaban.id_user', '=', Auth::user()->id]
+                    ])
+                    ->select('soal.*', 'jawaban.jawaban', 'jawaban.urut')
+                    ->where('jawaban.urut','=',$page)
+                    ->first();
 
             $nilai = Nilai::where([
                 ['id_user','=',Auth::user()->id],
@@ -152,12 +166,21 @@ class UjianController extends Controller
         }
     }
 
+    public function update_durasi(Request $rq, $id)
+    {
+        $nilai = Nilai::find($id);
+        $nilai->durasi = $rq->durasi;
+        $nilai->update();
+
+        return Response::json(['success'=> true]);
+    }
+
     public function halaman(Request $rq, $page){
         return Redirect::route('ujian', $page)
             ->with(['durasi' => $rq->durasi]);
     }
 
-
+    
     public function jawab(Request $rq){
         $idsoal = $rq->soal;
         $jawab = $rq->jawab;

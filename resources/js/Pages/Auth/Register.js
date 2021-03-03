@@ -47,8 +47,8 @@ export default (props) => {
         <form onSubmit={handleSubmit}>
 
             <div className="form-group">
-                <label>Username</label>
-                <input type="text" placeholder="Username"
+                <label>Name</label>
+                <input type="text" placeholder="Name"
                     className={"au-input au-input--full " + ('name' in props.errors ? 'is-invalid' : '')}
                     name="name"
                     value={values.name}
@@ -95,11 +95,6 @@ export default (props) => {
                 />
             </div>
 
-            <div className="login-checkbox">
-                <label>
-                    <input type="checkbox" name="aggree"/>Agree the terms and policy
-                </label>
-            </div>
             <button className="au-btn au-btn--block au-btn--green m-b-20" type="submit">
                 Register
             </button>

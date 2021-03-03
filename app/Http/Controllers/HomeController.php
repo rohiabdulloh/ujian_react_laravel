@@ -34,14 +34,19 @@ class HomeController extends Controller
             $siswa = new Siswa;
             $siswa->id_user = Auth::user()->id;
             $siswa->nis = '-';
-            $siswa->nama_siswa = '-';
-            $siswa->no_ujian = '3510JN-'.time();
+            $siswa->nama_siswa = Auth::user()->name;
+            $siswa->no_ujian = 'A721-'.time();
             $siswa->kelas = '-';
             $siswa->jenis_kelamin = 'L';
             $siswa->alamat = '-';
             $siswa->asal_sekolah = '-';
             $siswa->save();
         }
+
+        $user = Auth::user();
+        $user->picture = "user_male.png";
+        $user->update();
+        
         return Inertia::render('Front/Home',[
             'siswa' => $siswa,
             'waktu' => date('d-m-Y H:i:s')
@@ -79,7 +84,10 @@ class HomeController extends Controller
         $siswa->update();
 
         $user = Auth::user();
-        if($rq->hasFile('picture')){ //upload foto hanya jika ada perubahan foto
+        $user->name = $rq->nama_siswa;
+        if($rq->jenis_kelamin == "L") $user->picture = "user_male.png";
+        else $user->picture = "user_female.png";
+        /*if($rq->hasFile('picture')){ //upload foto hanya jika ada perubahan foto
             //hapus file foto sebelumnya
             if($user->picture!=null  and $user->picture!='user.gif' and file_exists(public_path('images/icon/'.$user->picture))){
                 unlink(public_path('images/icon/'.$user->picture));
@@ -89,6 +97,7 @@ class HomeController extends Controller
 
             $user->picture   = $image_name;
         }
+        */
      	$user->update();
 
     	return Redirect::route('peserta')
